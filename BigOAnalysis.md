@@ -188,3 +188,70 @@ function isWhat(n) {
 }
 ```
 
+Has linear run time O(n)
+
+### 11. Tower of Hanoi
+
+
+Derive an algorithm to solve the Tower of Hanoi puzzle.
+
+ for 2 discs
+
+ A->B
+ A->C
+ B->C
+
+ for 3 discs
+ A->C
+ A->B
+ C->B
+ A->C
+ B->A
+ B->C
+ A->C
+
+
+### Implement your algorithm using recursion. Your program should display each movement of the disk from one rod to another.
+
+```js
+let count =0
+
+const towerOfHanoi = function(n, source, dest, temp){
+   if(n>=1){
+
+       towerOfHanoi(n-1, source, temp, dest);
+       count++
+   console.log(`${count} Moving from ${source} to ${dest}`);
+       towerOfHanoi(n-1, temp, dest, source);
+}};
+
+towerOfHanoi(2, ‘A’, ‘C’, ‘B’);
+```
+
+### If you are given 5 disks, how do the rods look like after 7 recursive calls?
+
+1 A to C
+2 A to B
+3 C to B
+4 A to C
+5 B to A
+6 B to C
+7 A to C
+
+### How many moves are needed to complete the puzzle with 3 disks? with 4 disks? with 5 disks?
+
+3 disks 
+2^3-1 = 7
+
+4 disks
+2^4 -1 = 15
+
+5 disks
+2^5 -1 = 31
+
+### What is the runtime of your algorithm?
+O(2^n)
+
+each step has 2 operation, since there are always 2^n-1 steps to take, drop the constant, then it's big O of 2^n
+
+
