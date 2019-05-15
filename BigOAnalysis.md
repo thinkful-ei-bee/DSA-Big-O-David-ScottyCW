@@ -103,7 +103,7 @@ function createPairs(arr) {
 It's a nested loop so the big O is O(n^2)
 
 
-7. Compute the sequence
+### 7. Compute the sequence
 What does the following algorithm do? What is its runtime complexity? Explain your answer
 
 ```js
@@ -124,7 +124,7 @@ function compute(num) {
     return result;
 }
 ```
-
+Although there are 3 conditionals inside this for loop, only one of them is triggered during each loop run, so the big O is 
 O(n)
 
 ### 8. An efficient search
@@ -170,3 +170,21 @@ function findRandomElement(arr) {
 }
 ```
 because when this function is called, it only performs on computational action. So the big O is O(1)
+
+
+
+### 10. What Am I?
+What does the following algorithm do? What is the Big O of the following algorithm? Explain your answer
+
+```js
+function isWhat(n) {
+    if (n < 2 || n % 1 != 0) {
+        return false;
+    }
+    for (let i = 2; i < n; ++i) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+```
+
