@@ -257,3 +257,4 @@ each step has 2 operation, since there are always 2^n-1 steps to take, drop the 
 
 ### Iterative version 
 Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
+
